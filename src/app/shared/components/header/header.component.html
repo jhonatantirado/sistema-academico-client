@@ -1,7 +1,7 @@
 <mat-toolbar color="primary" *ngIf="isLoggedIn$ | async as isLoggedIn">
   <span>
     <img src="assets/img/angular_whiteTransparent.svg" class="angular-logo">
-    Sistema Académico
+    Sistema Académico UNMSM
   </span>
   <span class="fill-remaining-space"></span>
   <button mat-button routerLink="dashboard" > <mat-icon>home</mat-icon> </button>  
@@ -11,7 +11,7 @@
 <div class="signin-content" *ngIf="isLoggedIn$ | async as isLoggedIn">
     <mat-card>
         <mat-card-content>
-              Bienvenido
+              Bienvenido a la UNMSM
       </mat-card-content>
   </mat-card>
 </div>

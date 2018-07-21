@@ -59,11 +59,11 @@
 
     <!-- actions -->
     <ng-container matColumnDef="actions" >
-        <mat-header-cell *matHeaderCellDef mat-sort-header>Options</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Details</mat-header-cell>
 
         <mat-cell *matCellDef="let row; let i=index;">
           <button mat-icon-button color="accent" (click)="calculateAmount(i, row)" *ngIf="row.isActive">
-            <mat-icon aria-label="Edit">monetization_on</mat-icon>
+            <mat-icon aria-label="Edit">details</mat-icon>
           </button>
         </mat-cell>
     </ng-container>
@@ -81,7 +81,7 @@
   <mat-paginator #paginator
                  [length]="studentDataSource.filteredData.length"
                  [pageIndex]="0"
-                 [pageSize]="10"
-                 [pageSizeOptions]="[5, 10, 25, 100]">
+                 [pageSize]="100"
+                 [pageSizeOptions]="[100,200,300]">
   </mat-paginator>
 </div>

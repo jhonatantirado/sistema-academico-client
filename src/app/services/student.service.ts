@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Observable} from 'rxjs/Observable';
 import {Student} from '../models/student';
-import {HttpOptionsConst} from '../shared/models/http-options';
 import {HttpClient} from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import 'rxjs/add/operator/do';
