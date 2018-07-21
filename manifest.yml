@@ -1,8 +1,8 @@
 ---
 applications:
 - name: sistema-academico-client
-  path: /home/travis/build/jhonatantirado/sistema-academico-client/dist
+  path: /dist
   buildpack: staticfile_buildpack
-  memory: 512M
+  memory: 256M
   instances: 1
   random-route: true
