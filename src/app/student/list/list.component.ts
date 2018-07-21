@@ -23,7 +23,7 @@ import { MessageAlertHandleService } from '../../services/message-alert.service'
 })
 export class ListComponent implements OnInit {
   @BlockUI() blockUI: NgBlockUI;
-  displayedColumns = ['studentId', 'firstName', 'lastName', 'typeGrade', 'studentCode','isActive','actions'];
+  displayedColumns = ['studentId', 'firstName', 'lastName', 'studentType', 'studentCode','isActive','actions'];
   studentDataBase: StudentService | null;
   studentDataSource: StudentDataSource | null;
   studentsType: string[] = ['ALL','Pregrado','Maestria','Doctorado'];
@@ -85,7 +85,7 @@ export class ListComponent implements OnInit {
                 firstName: student.firstName, 
                 lastName: student.lastName, 
                 amount : 0,
-                typeGrade : student.studentType,
+                studentType : student.studentType,
                 studentCode : student.studentCode            
               }
         });
@@ -212,7 +212,7 @@ export class StudentDataSource extends DataSource<Student> {
             case 'studentId': [propertyA, propertyB] = [a.id, b.id]; break;
             case 'firstName': [propertyA, propertyB] = [a.firstName, b.firstName]; break;
             case 'lastName': [propertyA, propertyB] = [a.lastName, b.lastName]; break;
-            case 'typeGrade': [propertyA, propertyB] = [a.studentType, b.studentType]; break;
+            case 'studentType': [propertyA, propertyB] = [a.studentType, b.studentType]; break;
             case 'studentCode': [propertyA, propertyB] = [a.studentCode, b.studentCode]; break;
             case 'isActive': [propertyC, propertyD] = [a.isActive, b.isActive]; break;
           }
